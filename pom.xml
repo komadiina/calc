@@ -16,13 +16,6 @@
 
   <dependencies>
     <dependency>
-      <groupId>org.testng</groupId>
-      <artifactId>testng</artifactId>
-      <version>7.10.2</version>
-      <scope>test</scope>
-    </dependency>
-
-    <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>3.8.1</version>
@@ -41,15 +34,16 @@
       <scope>test</scope>
     </dependency>
     <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <version>5.11.3</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
       <groupId>org.hamcrest</groupId>
       <artifactId>hamcrest</artifactId>
       <version>3.0</version>
       <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.pitest</groupId>
-      <artifactId>pitest-testng-plugin</artifactId>
-      <version>1.0.0</version>
     </dependency>
   </dependencies>
 
@@ -59,12 +53,31 @@
         <groupId>org.pitest</groupId>
         <artifactId>pitest-maven</artifactId>
         <version>1.17.2</version>
+
+        <executions>
+          <execution>
+            <id>pit-report</id>
+            <!-- optional, this example attached the goal into mvn test phase -->
+            <phase>test</phase>
+            <goals>
+              <goal>mutationCoverage</goal>
+            </goals>
+          </execution>
+        </executions>
+
+        <dependencies>
+          <dependency>
+            <groupId>org.pitest</groupId>
+            <artifactId>pitest-junit5-plugin</artifactId>
+            <version>1.2.1</version>
+          </dependency>
+        </dependencies>
         <configuration>
           <targetClasses>
-            <param>org.etfbl.tks.Calculator</param>
+            <param>org.etfbl.tks.*</param>
           </targetClasses>
           <targetTests>
-            <param>org.etfbl.tks.CalculatorTest</param>
+            <param>org.etfbl.tks.*</param>
           </targetTests>
         </configuration>
       </plugin>

@@ -1,0 +1,2260 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+
+
+<h1>CalculatorAdvanced.java</h1>
+
+<table class="src">
+
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_1'/>
+1
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_1'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>package org.etfbl.tks;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_2'/>
+2
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_2'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_3'/>
+3
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_3'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import org.etfbl.tks.exceptions.NumberNotInAreaException;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_4'/>
+4
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_4'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import org.etfbl.tks.exceptions.NotSupportedOperationException;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_5'/>
+5
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_5'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_6'/>
+6
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_6'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>/**</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_7'/>
+7
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_7'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * An extended calculator class, implementing advanced mathematical operations, such as factorial calculation,</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_8'/>
+8
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_8'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * exponentiation, calculating the Armstrong and perfect-number properties of accumulator value. For additional</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_9'/>
+9
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_9'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * information, refer to the &#60;code&#62;Calculator&#60;/code&#62; class, linked below.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_10'/>
+10
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_10'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> *</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_11'/>
+11
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_11'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * @author Ognjen Komadina, ind. 1163/20</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_12'/>
+12
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_12'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * @since 2024-11-30</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_13'/>
+13
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_13'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * @see Calculator</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_14'/>
+14
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_14'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> */</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_15'/>
+15
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_15'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>public class CalculatorAdvanced extends Calculator {</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_16'/>
+16
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_16'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_17'/>
+17
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_17'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_18'/>
+18
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_18'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     * The method performs dual responsibility, calculating the factorial value of &#60;code&#62;currentValue&#60;/code&#62; (if the</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_19'/>
+19
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_19'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     * value of &#60;code&#62;action&#60;/code&#62; is equal to &#60;code&#62;&#39;!&#39;&#60;/code&#62;, &#60;code&#62;0x21&#60;/code&#62;), or exponentiation (if the provided</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_20'/>
+20
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_20'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     * value of &#60;code&#62;action&#60;/code&#62; is between &#60;code&#62;[0x30, 0x39]&#60;/code&#62;).</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_21'/>
+21
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_21'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     *</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_22'/>
+22
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_22'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     * @param action The advanced mathematical calculation to be performed (factorial calculation or exponentiation).</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_23'/>
+23
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_23'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     * @throws NotSupportedOperationException If the value of &#60;code&#62;action&#60;/code&#62; is not in the range of</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_24'/>
+24
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_24'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     * &#60;code&#62;[0x30, 0x39]&#60;/code&#62; or is not equal to the ASCII value of &#39;&#60;code&#62;!&#60;/code&#62;&#39; (&#60;code&#62;0x21&#60;/code&#62;)</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_25'/>
+25
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_25'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     * @throws NumberNotInAreaException Calculating the factorial value of &#60;code&#62;currentValue&#60;/code&#62; is allowed only if</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_26'/>
+26
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_26'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     * the floor-value of it is in the range of &#60;code&#62;[0, 10]&#60;/code&#62;, otherwise this exception is thrown.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_27'/>
+27
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_27'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     */</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_28'/>
+28
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_28'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public void calculateAdvanced(char action)</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_29'/>
+29
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_29'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        throws NotSupportedOperationException, NumberNotInAreaException</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_30'/>
+30
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_30'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_31'/>
+31
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_31'>3</a>
+<span>
+
+1. calculateAdvanced : negated conditional &rarr; KILLED<br/>
+
+2. calculateAdvanced : negated conditional &rarr; KILLED<br/>
+
+3. calculateAdvanced : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        if (this.getCurrentValue() == null || this.getCurrentValue().isNaN() || this.getCurrentValue().isInfinite()) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_32'/>
+32
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_32'>1</a>
+<span>
+
+1. calculateAdvanced : removed call to org/etfbl/tks/CalculatorAdvanced::setCurrentValue &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            this.setCurrentValue(0.0);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_33'/>
+33
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_33'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_34'/>
+34
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_34'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_35'/>
+35
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_35'>1</a>
+<span>
+
+1. calculateAdvanced : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        if (action == &#39;!&#39;) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_36'/>
+36
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_36'>4</a>
+<span>
+
+1. calculateAdvanced : changed conditional boundary &rarr; KILLED<br/>
+
+2. calculateAdvanced : changed conditional boundary &rarr; KILLED<br/>
+
+3. calculateAdvanced : negated conditional &rarr; KILLED<br/>
+
+4. calculateAdvanced : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            if (getCurrentValue() &#60; 0.0 || getCurrentValue() &#62; 10.0)</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_37'/>
+37
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_37'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>                throw new NumberNotInAreaException(</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_38'/>
+38
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_38'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>                        &#34;Expected a non-negative integer in range [0, 10], received: &#34; + getCurrentValue().intValue());</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_39'/>
+39
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_39'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>            int product = 1;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_40'/>
+40
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_40'>2</a>
+<span>
+
+1. calculateAdvanced : negated conditional &rarr; KILLED<br/>
+
+2. calculateAdvanced : changed conditional boundary &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            for (int i = 1; i &#60;= getCurrentValue().intValue(); i++) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_41'/>
+41
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_41'>1</a>
+<span>
+
+1. calculateAdvanced : Replaced integer multiplication with division &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>                product *= i;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_42'/>
+42
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_42'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>            }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_43'/>
+43
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_43'>1</a>
+<span>
+
+1. calculateAdvanced : removed call to org/etfbl/tks/CalculatorAdvanced::setCurrentValue &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            setCurrentValue((double)product);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_44'/>
+44
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_44'>4</a>
+<span>
+
+1. calculateAdvanced : changed conditional boundary &rarr; KILLED<br/>
+
+2. calculateAdvanced : negated conditional &rarr; KILLED<br/>
+
+3. calculateAdvanced : changed conditional boundary &rarr; KILLED<br/>
+
+4. calculateAdvanced : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        } else if (action &#62;= 0x30 &#38;&#38; action &#60;= 0x39) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_45'/>
+45
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_45'>1</a>
+<span>
+
+1. calculateAdvanced : Replaced integer subtraction with addition &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            int exponentValue = (int)action - 0x30;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_46'/>
+46
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_46'>1</a>
+<span>
+
+1. calculateAdvanced : removed call to org/etfbl/tks/CalculatorAdvanced::setCurrentValue &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            setCurrentValue((double)exponent(getCurrentValue().intValue(), exponentValue));</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_47'/>
+47
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_47'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        } else throw new NotSupportedOperationException(&#34;Invalid action: &#34; + action);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_48'/>
+48
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_48'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_49'/>
+49
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_49'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_50'/>
+50
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_50'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_51'/>
+51
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_51'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     * Calculates whether the &#60;code&#62;currentValue&#60;/code&#62; accumulator value satisfies the following characteristics (based</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_52'/>
+52
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_52'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     * on the &#60;code&#62;value&#60;/code&#62; symbol):</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_53'/>
+53
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_53'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     *</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_54'/>
+54
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_54'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     * &#60;ul&#62;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_55'/>
+55
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_55'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     *     &#60;li&#62;&#60;i&#62;Armstrong&#39;s number: returns &#60;code&#62;true&#60;/code&#62; for an N-digit number, if the sum of it&#39;s N-powered</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_56'/>
+56
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_56'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     *     digits is equal to the number itself.&#60;/i&#62;&#60;/li&#62;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_57'/>
+57
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_57'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     *     &#60;li&#62;&#60;i&#62;Perfect number: returns &#60;code&#62;true&#60;/code&#62; if the number is equal to the sum of it&#39;s common divisors.&#60;/i&#62;&#60;/li&#62;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_58'/>
+58
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_58'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     * &#60;/ul&#62;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_59'/>
+59
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_59'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     *</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_60'/>
+60
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_60'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     * @param value The characteristic symbol, &#60;code&#62;A&#60;/code&#62; for Armstrong condition, and &#60;code&#62;P&#60;/code&#62; for the perfect</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_61'/>
+61
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_61'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     *              number characteristic.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_62'/>
+62
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_62'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     * @return Boolean logic value, indicating whether the &#60;code&#62;currentValue&#60;/code&#62; satisfies the specified characteristic.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_63'/>
+63
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_63'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     * @throws NotSupportedOperationException If any ASCII symbol for &#60;code&#62;value&#60;/code&#62; other than &#60;code&#62;A&#60;/code&#62; or</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_64'/>
+64
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_64'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     * &#60;code&#62;P&#60;/code&#62; is passed.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_65'/>
+65
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_65'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     * @throws NumberNotInAreaException If the &#60;code&#62;currentValue&#60;/code&#62; mathematical floor value is less than 1 (i.e.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_66'/>
+66
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_66'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     * it&#39;s integer representation).</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_67'/>
+67
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_67'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     */</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_68'/>
+68
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_68'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public Boolean hasCharacteristic(char value)</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_69'/>
+69
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_69'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>            throws NotSupportedOperationException, NumberNotInAreaException {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_70'/>
+70
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_70'>2</a>
+<span>
+
+1. hasCharacteristic : negated conditional &rarr; KILLED<br/>
+
+2. hasCharacteristic : changed conditional boundary &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        if (getCurrentValue().intValue() &#60; 1) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_71'/>
+71
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_71'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>            throw new NumberNotInAreaException(</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_72'/>
+72
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_72'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>                    &#34;Expected floor value greater than 1, received: &#34; + getCurrentValue().intValue());</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_73'/>
+73
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_73'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_74'/>
+74
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_74'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_75'/>
+75
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_75'>1</a>
+<span>
+
+1. hasCharacteristic : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        if (value == &#39;A&#39;) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_76'/>
+76
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_76'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>            int len = String.format(&#34;%d&#34;, getCurrentValue().intValue()).length(),</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_77'/>
+77
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_77'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>                temp = getCurrentValue().intValue(),</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_78'/>
+78
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_78'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>                digit, sum = 0;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_79'/>
+79
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_79'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_80'/>
+80
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_80'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>            do {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_81'/>
+81
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_81'>1</a>
+<span>
+
+1. hasCharacteristic : Replaced integer modulus with multiplication &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>                digit = temp % 10;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_82'/>
+82
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_82'>1</a>
+<span>
+
+1. hasCharacteristic : Replaced integer division with multiplication &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>                temp /= 10;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_83'/>
+83
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_83'>1</a>
+<span>
+
+1. hasCharacteristic : Replaced integer addition with subtraction &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>                sum += exponent(digit, len);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_84'/>
+84
+</td>
+<td class='uncertain'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_84'>2</a>
+<span>
+
+1. hasCharacteristic : changed conditional boundary &rarr; TIMED_OUT<br/>
+
+2. hasCharacteristic : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='uncertain'>            } while (temp &#62; 0);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_85'/>
+85
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_85'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_86'/>
+86
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_86'>2</a>
+<span>
+
+1. hasCharacteristic : replaced Boolean return with True for org/etfbl/tks/CalculatorAdvanced::hasCharacteristic &rarr; KILLED<br/>
+
+2. hasCharacteristic : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            return sum == getCurrentValue().intValue();</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_87'/>
+87
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_87'>1</a>
+<span>
+
+1. hasCharacteristic : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        } else if (value == &#39;P&#39;) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_88'/>
+88
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_88'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>            int sum = 1;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_89'/>
+89
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_89'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_90'/>
+90
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_90'>3</a>
+<span>
+
+1. hasCharacteristic : Replaced integer division with multiplication &rarr; KILLED<br/>
+
+2. hasCharacteristic : negated conditional &rarr; KILLED<br/>
+
+3. hasCharacteristic : changed conditional boundary &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            for (int i = 2; i &#60;= getCurrentValue().intValue() / 2; i++) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_91'/>
+91
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_91'>2</a>
+<span>
+
+1. hasCharacteristic : Replaced integer modulus with multiplication &rarr; KILLED<br/>
+
+2. hasCharacteristic : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>                if (getCurrentValue().intValue() % i == 0) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_92'/>
+92
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_92'>1</a>
+<span>
+
+1. hasCharacteristic : Replaced integer addition with subtraction &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>                    sum += i;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_93'/>
+93
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_93'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>                }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_94'/>
+94
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_94'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>            }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_95'/>
+95
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_95'>2</a>
+<span>
+
+1. hasCharacteristic : replaced Boolean return with True for org/etfbl/tks/CalculatorAdvanced::hasCharacteristic &rarr; KILLED<br/>
+
+2. hasCharacteristic : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            return sum == getCurrentValue().intValue();</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_96'/>
+96
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_96'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        } else throw new NotSupportedOperationException();</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_97'/>
+97
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_97'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_98'/>
+98
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_98'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_99'/>
+99
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_99'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    /* [public] for unit-testing purposes */</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_100'/>
+100
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_100'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_101'/>
+101
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_101'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_102'/>
+102
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_102'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     * Raises the &#60;code&#62;value&#60;/code&#62; parameter to the &#60;code&#62;exponent&#60;/code&#62; value, through repeated multiplication. For</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_103'/>
+103
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_103'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     * zero-exponent (i.e. &#60;code&#62;a^0&#60;/code&#62;) cases, the return value is equal to the mathematical rules, &#60;code&#62;0&#60;/code&#62;.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_104'/>
+104
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_104'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     *</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_105'/>
+105
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_105'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     * @param value The value to be exponentiated (base).</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_106'/>
+106
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_106'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     * @param exponent The exponent value.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_107'/>
+107
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_107'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     * @return Mathematical result of &#60;code&#62;value&#60;/code&#62;&#39;s exponentiation to the power of &#60;code&#62;exponent&#60;/code&#62;.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_108'/>
+108
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_108'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     */</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_109'/>
+109
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_109'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public int exponent(int value, int exponent) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_110'/>
+110
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_110'>2</a>
+<span>
+
+1. exponent : replaced int return with 0 for org/etfbl/tks/CalculatorAdvanced::exponent &rarr; KILLED<br/>
+
+2. exponent : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        if (exponent == 0) return 1;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_111'/>
+111
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_111'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_112'/>
+112
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_112'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        int originalValue = value;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_113'/>
+113
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_113'>2</a>
+<span>
+
+1. exponent : negated conditional &rarr; KILLED<br/>
+
+2. exponent : changed conditional boundary &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        while (exponent &#62; 1) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_114'/>
+114
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_114'>1</a>
+<span>
+
+1. exponent : Replaced integer multiplication with division &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            value *= originalValue;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_115'/>
+115
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_115'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>            exponent--;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_116'/>
+116
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_116'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_117'/>
+117
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_117'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_118'/>
+118
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_118'>1</a>
+<span>
+
+1. exponent : replaced int return with 0 for org/etfbl/tks/CalculatorAdvanced::exponent &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return value;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_119'/>
+119
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_119'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@6c61a903_120'/>
+120
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_120'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>}</span></pre></td></tr>
+
+
+
+<tr><td></td><td></td><td><h2>Mutations</h2></td></tr>
+
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@6c61a903_31'>31</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_31'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>calculateAdvanced<br/><b>Killed by : </b>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[test-template:testCalcAdvancedParams(java.lang.Double, char, java.lang.Double)]/[test-template-invocation:#12]</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>calculateAdvanced<br/><b>Killed by : </b>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[test-template:testCalcAdvancedParams(java.lang.Double, char, java.lang.Double)]/[test-template-invocation:#18]</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>calculateAdvanced<br/><b>Killed by : </b>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[test-template:testCalcAdvancedParams(java.lang.Double, char, java.lang.Double)]/[test-template-invocation:#12]</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@6c61a903_32'>32</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_32'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>calculateAdvanced<br/><b>Killed by : </b>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[test-template:testCalcAdvancedParams(java.lang.Double, char, java.lang.Double)]/[test-template-invocation:#18]</span></span> removed call to org/etfbl/tks/CalculatorAdvanced::setCurrentValue &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@6c61a903_35'>35</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_35'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>calculateAdvanced<br/><b>Killed by : </b>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[test-template:testCalcAdvancedParams(java.lang.Double, char, java.lang.Double)]/[test-template-invocation:#17]</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@6c61a903_36'>36</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_36'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>calculateAdvanced<br/><b>Killed by : </b>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[test-template:testCalcAdvancedParams(java.lang.Double, char, java.lang.Double)]/[test-template-invocation:#5]</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>calculateAdvanced<br/><b>Killed by : </b>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[test-template:testCalcAdvancedParams(java.lang.Double, char, java.lang.Double)]/[test-template-invocation:#17]</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>calculateAdvanced<br/><b>Killed by : </b>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[test-template:testCalcAdvancedParams(java.lang.Double, char, java.lang.Double)]/[test-template-invocation:#17]</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>calculateAdvanced<br/><b>Killed by : </b>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[test-template:testCalcAdvancedParams(java.lang.Double, char, java.lang.Double)]/[test-template-invocation:#17]</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@6c61a903_40'>40</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_40'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>calculateAdvanced<br/><b>Killed by : </b>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[test-template:testCalcAdvancedParams(java.lang.Double, char, java.lang.Double)]/[test-template-invocation:#17]</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>calculateAdvanced<br/><b>Killed by : </b>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[test-template:testCalcAdvancedParams(java.lang.Double, char, java.lang.Double)]/[test-template-invocation:#5]</span></span> changed conditional boundary &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@6c61a903_41'>41</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_41'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>calculateAdvanced<br/><b>Killed by : </b>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[test-template:testCalcAdvancedParams(java.lang.Double, char, java.lang.Double)]/[test-template-invocation:#5]</span></span> Replaced integer multiplication with division &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@6c61a903_43'>43</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_43'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>calculateAdvanced<br/><b>Killed by : </b>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[test-template:testCalcAdvancedParams(java.lang.Double, char, java.lang.Double)]/[test-template-invocation:#17]</span></span> removed call to org/etfbl/tks/CalculatorAdvanced::setCurrentValue &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@6c61a903_44'>44</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_44'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>calculateAdvanced<br/><b>Killed by : </b>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[test-template:testCalcAdvancedParams(java.lang.Double, char, java.lang.Double)]/[test-template-invocation:#13]</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>calculateAdvanced<br/><b>Killed by : </b>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[test-template:testCalcAdvancedParams(java.lang.Double, char, java.lang.Double)]/[test-template-invocation:#18]</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>calculateAdvanced<br/><b>Killed by : </b>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[test-template:testCalcAdvancedParams(java.lang.Double, char, java.lang.Double)]/[test-template-invocation:#18]</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>calculateAdvanced<br/><b>Killed by : </b>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[test-template:testCalcAdvancedParams(java.lang.Double, char, java.lang.Double)]/[test-template-invocation:#18]</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@6c61a903_45'>45</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_45'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>calculateAdvanced<br/><b>Killed by : </b>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[test-template:testCalcAdvancedParams(java.lang.Double, char, java.lang.Double)]/[test-template-invocation:#18]</span></span> Replaced integer subtraction with addition &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@6c61a903_46'>46</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_46'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>calculateAdvanced<br/><b>Killed by : </b>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[test-template:testCalcAdvancedParams(java.lang.Double, char, java.lang.Double)]/[test-template-invocation:#18]</span></span> removed call to org/etfbl/tks/CalculatorAdvanced::setCurrentValue &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@6c61a903_70'>70</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_70'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>hasCharacteristic<br/><b>Killed by : </b>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[test-template:testCharacteristicParameterized(java.lang.Double, char, java.lang.Boolean)]/[test-template-invocation:#4]</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>hasCharacteristic<br/><b>Killed by : </b>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[test-template:testCharacteristicParameterized(java.lang.Double, char, java.lang.Boolean)]/[test-template-invocation:#4]</span></span> changed conditional boundary &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@6c61a903_75'>75</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_75'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>hasCharacteristic<br/><b>Killed by : </b>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[method:testUnsupportedOpCharacteristic()]</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@6c61a903_81'>81</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_81'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>hasCharacteristic<br/><b>Killed by : </b>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[method:testArmstrongCharacteristic()]</span></span> Replaced integer modulus with multiplication &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@6c61a903_82'>82</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_82'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>hasCharacteristic<br/><b>Killed by : </b>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[method:testArmstrongCharacteristic()]</span></span> Replaced integer division with multiplication &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@6c61a903_83'>83</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_83'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>hasCharacteristic<br/><b>Killed by : </b>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[method:testArmstrongCharacteristic()]</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@6c61a903_84'>84</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_84'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>hasCharacteristic<br/><b>Killed by : </b>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[method:testArmstrongCharacteristic()]</span></span> negated conditional &rarr; KILLED</p> <p class='TIMED_OUT'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>hasCharacteristic<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; TIMED_OUT</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@6c61a903_86'>86</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_86'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>hasCharacteristic<br/><b>Killed by : </b>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[test-template:testCharacteristicParameterized(java.lang.Double, char, java.lang.Boolean)]/[test-template-invocation:#2]</span></span> replaced Boolean return with True for org/etfbl/tks/CalculatorAdvanced::hasCharacteristic &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>hasCharacteristic<br/><b>Killed by : </b>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[test-template:testCharacteristicParameterized(java.lang.Double, char, java.lang.Boolean)]/[test-template-invocation:#2]</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@6c61a903_87'>87</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_87'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>hasCharacteristic<br/><b>Killed by : </b>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[test-template:testCharacteristicParameterized(java.lang.Double, char, java.lang.Boolean)]/[test-template-invocation:#4]</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@6c61a903_90'>90</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_90'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>hasCharacteristic<br/><b>Killed by : </b>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[method:testPerfectNumberCharacteristic()]</span></span> Replaced integer division with multiplication &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>hasCharacteristic<br/><b>Killed by : </b>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[method:testPerfectNumberCharacteristic()]</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>hasCharacteristic<br/><b>Killed by : </b>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[method:testPerfectNumberCharacteristic()]</span></span> changed conditional boundary &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@6c61a903_91'>91</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_91'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>hasCharacteristic<br/><b>Killed by : </b>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[method:testPerfectNumberCharacteristic()]</span></span> Replaced integer modulus with multiplication &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>hasCharacteristic<br/><b>Killed by : </b>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[method:testPerfectNumberCharacteristic()]</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@6c61a903_92'>92</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_92'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>hasCharacteristic<br/><b>Killed by : </b>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[method:testPerfectNumberCharacteristic()]</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@6c61a903_95'>95</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_95'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>hasCharacteristic<br/><b>Killed by : </b>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[test-template:testCharacteristicParameterized(java.lang.Double, char, java.lang.Boolean)]/[test-template-invocation:#5]</span></span> replaced Boolean return with True for org/etfbl/tks/CalculatorAdvanced::hasCharacteristic &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>hasCharacteristic<br/><b>Killed by : </b>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[test-template:testCharacteristicParameterized(java.lang.Double, char, java.lang.Boolean)]/[test-template-invocation:#4]</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@6c61a903_110'>110</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_110'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>exponent<br/><b>Killed by : </b>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[test-template:testCalcAdvancedParams(java.lang.Double, char, java.lang.Double)]/[test-template-invocation:#18]</span></span> replaced int return with 0 for org/etfbl/tks/CalculatorAdvanced::exponent &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>exponent<br/><b>Killed by : </b>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[test-template:testCalcAdvancedParams(java.lang.Double, char, java.lang.Double)]/[test-template-invocation:#18]</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@6c61a903_113'>113</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_113'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>exponent<br/><b>Killed by : </b>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[method:testExponent()]</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>exponent<br/><b>Killed by : </b>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[method:testExponent()]</span></span> changed conditional boundary &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@6c61a903_114'>114</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_114'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>exponent<br/><b>Killed by : </b>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[method:testExponent()]</span></span> Replaced integer multiplication with division &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@6c61a903_118'>118</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@6c61a903_118'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>exponent<br/><b>Killed by : </b>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[method:testExponent()]</span></span> replaced int return with 0 for org/etfbl/tks/CalculatorAdvanced::exponent &rarr; KILLED</p> 
+</td>
+</tr>
+
+</table>
+
+
+<h2>Active mutators</h2>
+<ul>
+
+<li class='mutator'>CONDITIONALS_BOUNDARY</li>
+
+<li class='mutator'>EMPTY_RETURNS</li>
+
+<li class='mutator'>FALSE_RETURNS</li>
+
+<li class='mutator'>INCREMENTS</li>
+
+<li class='mutator'>INVERT_NEGS</li>
+
+<li class='mutator'>MATH</li>
+
+<li class='mutator'>NEGATE_CONDITIONALS</li>
+
+<li class='mutator'>NULL_RETURNS</li>
+
+<li class='mutator'>PRIMITIVE_RETURNS</li>
+
+<li class='mutator'>TRUE_RETURNS</li>
+
+<li class='mutator'>VOID_METHOD_CALLS</li>
+
+</ul>
+
+<h2>Tests examined</h2>
+<ul>
+<li>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[test-template:testCalcAdvancedParams(java.lang.Double, char, java.lang.Double)]/[test-template-invocation:#16] (0 ms)</li><li>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[test-template:testCalcAdvancedParams(java.lang.Double, char, java.lang.Double)]/[test-template-invocation:#15] (0 ms)</li><li>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[test-template:testCalcAdvancedParams(java.lang.Double, char, java.lang.Double)]/[test-template-invocation:#12] (0 ms)</li><li>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[test-template:testCalcAdvancedParams(java.lang.Double, char, java.lang.Double)]/[test-template-invocation:#13] (0 ms)</li><li>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[method:testFactorial()] (0 ms)</li><li>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[method:testExponentiation()] (0 ms)</li><li>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[test-template:testCalcAdvancedParams(java.lang.Double, char, java.lang.Double)]/[test-template-invocation:#9] (0 ms)</li><li>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[test-template:testCalcAdvancedParams(java.lang.Double, char, java.lang.Double)]/[test-template-invocation:#8] (0 ms)</li><li>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[test-template:testCalcAdvancedParams(java.lang.Double, char, java.lang.Double)]/[test-template-invocation:#7] (0 ms)</li><li>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[test-template:testCalcAdvancedParams(java.lang.Double, char, java.lang.Double)]/[test-template-invocation:#6] (0 ms)</li><li>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[test-template:testCalcAdvancedParams(java.lang.Double, char, java.lang.Double)]/[test-template-invocation:#5] (0 ms)</li><li>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[test-template:testCalcAdvancedParams(java.lang.Double, char, java.lang.Double)]/[test-template-invocation:#4] (0 ms)</li><li>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[test-template:testCalcAdvancedParams(java.lang.Double, char, java.lang.Double)]/[test-template-invocation:#3] (0 ms)</li><li>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[test-template:testCalcAdvancedParams(java.lang.Double, char, java.lang.Double)]/[test-template-invocation:#2] (0 ms)</li><li>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[test-template:testCalcAdvancedParams(java.lang.Double, char, java.lang.Double)]/[test-template-invocation:#10] (0 ms)</li><li>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[test-template:testCalcAdvancedParams(java.lang.Double, char, java.lang.Double)]/[test-template-invocation:#11] (0 ms)</li><li>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[method:testUnsupportedOpAdvanced()] (0 ms)</li><li>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[method:testFactorialNumberAreaEx()] (0 ms)</li><li>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[test-template:testCalcAdvancedParams(java.lang.Double, char, java.lang.Double)]/[test-template-invocation:#1] (1 ms)</li><li>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[test-template:testCharacteristicParameterized(java.lang.Double, char, java.lang.Boolean)]/[test-template-invocation:#4] (0 ms)</li><li>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[test-template:testCharacteristicParameterized(java.lang.Double, char, java.lang.Boolean)]/[test-template-invocation:#5] (0 ms)</li><li>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[method:testPerfectNumberCharacteristic()] (0 ms)</li><li>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[test-template:testCharacteristicParameterized(java.lang.Double, char, java.lang.Boolean)]/[test-template-invocation:#6] (0 ms)</li><li>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[test-template:testCalcAdvancedParams(java.lang.Double, char, java.lang.Double)]/[test-template-invocation:#17] (0 ms)</li><li>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[test-template:testCalcAdvancedParams(java.lang.Double, char, java.lang.Double)]/[test-template-invocation:#18] (0 ms)</li><li>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[test-template:testCalcAdvancedParams(java.lang.Double, char, java.lang.Double)]/[test-template-invocation:#14] (0 ms)</li><li>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[test-template:testCharacteristicParameterized(java.lang.Double, char, java.lang.Boolean)]/[test-template-invocation:#2] (0 ms)</li><li>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[method:testArmstrongCharacteristic()] (0 ms)</li><li>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[test-template:testCharacteristicParameterized(java.lang.Double, char, java.lang.Boolean)]/[test-template-invocation:#3] (0 ms)</li><li>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[test-template:testCharacteristicParameterized(java.lang.Double, char, java.lang.Boolean)]/[test-template-invocation:#1] (21 ms)</li><li>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[method:testUnsupportedOpCharacteristic()] (0 ms)</li><li>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[method:testCharacteristicNumberAreaEx()] (0 ms)</li><li>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[method:testNumberArea()] (3 ms)</li><li>org.etfbl.tks.CalculatorAdvancedTest.[engine:junit-jupiter]/[class:org.etfbl.tks.CalculatorAdvancedTest]/[method:testExponent()] (0 ms)</li>
+</ul>
+
+<br/>
+
+Report generated by <a href='https://pitest.org'>PIT</a> 1.15.8
+
+</body>
+</html>

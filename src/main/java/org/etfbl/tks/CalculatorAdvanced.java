@@ -92,7 +92,6 @@ public class CalculatorAdvanced extends Calculator {
                     sum += i;
                 }
             }
-            System.out.printf("%d <-> %d\n", sum, getCurrentValue().intValue());
             return sum == getCurrentValue().intValue();
         } else throw new NotSupportedOperationException();
     }

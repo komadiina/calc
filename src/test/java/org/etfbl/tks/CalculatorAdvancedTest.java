@@ -149,6 +149,7 @@ public class CalculatorAdvancedTest {
                 Arguments.of(3.01, '!', 6.0),
                 Arguments.of(2.999999, '!', 2.0),
                 Arguments.of(0.0, '!', 1.0),
+                Arguments.of(10.0, '!', 3628800.0),
                 Arguments.of(3.0, '2', 9.0),
                 Arguments.of(3.01, '2', 9.0),
                 Arguments.of(0.0, '0', 1.0),
