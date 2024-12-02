@@ -1,0 +1,228 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=windows-1252"> 
+  <title>Coverage Report > CalculatorAdvanced</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">org.etfbl.tks</a>
+</div>
+
+<h1>Coverage Summary for Class: CalculatorAdvanced (org.etfbl.tks)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Branch, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">CalculatorAdvanced</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/4)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/38)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/41)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package org.etfbl.tks;
+&nbsp;
+&nbsp;import org.etfbl.tks.exceptions.NumberNotInAreaException;
+&nbsp;import org.etfbl.tks.exceptions.NotSupportedOperationException;
+&nbsp;
+&nbsp;/**
+&nbsp; * An extended calculator class, implementing advanced mathematical operations, such as factorial calculation,
+&nbsp; * exponentiation, calculating the Armstrong and perfect-number properties of accumulator value. For additional
+&nbsp; * information, refer to the &lt;code&gt;Calculator&lt;/code&gt; class, linked below.
+&nbsp; *
+&nbsp; * @author Ognjen Komadina, ind. 1163/20
+&nbsp; * @since 2024-11-30
+&nbsp; * @see Calculator
+&nbsp; */
+<b class="nc">&nbsp;public class CalculatorAdvanced extends Calculator {</b>
+&nbsp;
+&nbsp;    /**
+&nbsp;     * The method performs dual responsibility, calculating the factorial value of &lt;code&gt;currentValue&lt;/code&gt; (if the
+&nbsp;     * value of &lt;code&gt;action&lt;/code&gt; is equal to &lt;code&gt;&#39;!&#39;&lt;/code&gt;, &lt;code&gt;0x21&lt;/code&gt;), or exponentiation (if the provided
+&nbsp;     * value of &lt;code&gt;action&lt;/code&gt; is between &lt;code&gt;[0x30, 0x39]&lt;/code&gt;).
+&nbsp;     *
+&nbsp;     * @param action The advanced mathematical calculation to be performed (factorial calculation or exponentiation).
+&nbsp;     * @throws NotSupportedOperationException If the value of &lt;code&gt;action&lt;/code&gt; is not in the range of
+&nbsp;     * &lt;code&gt;[0x30, 0x39]&lt;/code&gt; or is not equal to the ASCII value of &#39;&lt;code&gt;!&lt;/code&gt;&#39; (&lt;code&gt;0x21&lt;/code&gt;)
+&nbsp;     * @throws NumberNotInAreaException Calculating the factorial value of &lt;code&gt;currentValue&lt;/code&gt; is allowed only if
+&nbsp;     * the floor-value of it is in the range of &lt;code&gt;[0, 10]&lt;/code&gt;, otherwise this exception is thrown.
+&nbsp;     */
+&nbsp;    public void calculateAdvanced(char action)
+&nbsp;        throws NotSupportedOperationException, NumberNotInAreaException
+&nbsp;    {
+<b class="nc">&nbsp;        if (this.getCurrentValue() == null || this.getCurrentValue().isNaN() || this.getCurrentValue().isInfinite()) {</b>
+<b class="nc">&nbsp;            this.setCurrentValue(0.0);</b>
+&nbsp;        }
+&nbsp;
+<b class="nc">&nbsp;        if (action == &#39;!&#39;) {</b>
+<b class="nc">&nbsp;            if (getCurrentValue() &lt; 0.0 || getCurrentValue() &gt; 10.0)</b>
+<b class="nc">&nbsp;                throw new NumberNotInAreaException(</b>
+<b class="nc">&nbsp;                        &quot;Expected a non-negative integer in range [0, 10], received: &quot; + getCurrentValue().intValue());</b>
+<b class="nc">&nbsp;            int product = 1;</b>
+<b class="nc">&nbsp;            for (int i = 1; i &lt;= getCurrentValue().intValue(); i++) {</b>
+<b class="nc">&nbsp;                product *= i;</b>
+&nbsp;            }
+<b class="nc">&nbsp;            setCurrentValue((double)product);</b>
+<b class="nc">&nbsp;        } else if (action &gt;= 0x30 &amp;&amp; action &lt;= 0x39) {</b>
+<b class="nc">&nbsp;            int exponentValue = (int)action - 0x30;</b>
+<b class="nc">&nbsp;            setCurrentValue((double)exponent(getCurrentValue().intValue(), exponentValue));</b>
+<b class="nc">&nbsp;        } else throw new NotSupportedOperationException(&quot;Invalid action: &quot; + action);</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Calculates whether the &lt;code&gt;currentValue&lt;/code&gt; accumulator value satisfies the following characteristics (based
+&nbsp;     * on the &lt;code&gt;value&lt;/code&gt; symbol):
+&nbsp;     *
+&nbsp;     * &lt;ul&gt;
+&nbsp;     *     &lt;li&gt;&lt;i&gt;Armstrong&#39;s number: returns &lt;code&gt;true&lt;/code&gt; for an N-digit number, if the sum of it&#39;s N-powered
+&nbsp;     *     digits is equal to the number itself.&lt;/i&gt;&lt;/li&gt;
+&nbsp;     *     &lt;li&gt;&lt;i&gt;Perfect number: returns &lt;code&gt;true&lt;/code&gt; if the number is equal to the sum of it&#39;s common divisors.&lt;/i&gt;&lt;/li&gt;
+&nbsp;     * &lt;/ul&gt;
+&nbsp;     *
+&nbsp;     * @param value The characteristic symbol, &lt;code&gt;A&lt;/code&gt; for Armstrong condition, and &lt;code&gt;P&lt;/code&gt; for the perfect
+&nbsp;     *              number characteristic.
+&nbsp;     * @return Boolean logic value, indicating whether the &lt;code&gt;currentValue&lt;/code&gt; satisfies the specified characteristic.
+&nbsp;     * @throws NotSupportedOperationException If any ASCII symbol for &lt;code&gt;value&lt;/code&gt; other than &lt;code&gt;A&lt;/code&gt; or
+&nbsp;     * &lt;code&gt;P&lt;/code&gt; is passed.
+&nbsp;     * @throws NumberNotInAreaException If the &lt;code&gt;currentValue&lt;/code&gt; mathematical floor value is less than 1 (i.e.
+&nbsp;     * it&#39;s integer representation).
+&nbsp;     */
+&nbsp;    public Boolean hasCharacteristic(char value)
+&nbsp;            throws NotSupportedOperationException, NumberNotInAreaException {
+<b class="nc">&nbsp;        if (getCurrentValue().intValue() &lt; 1) {</b>
+<b class="nc">&nbsp;            throw new NumberNotInAreaException(</b>
+<b class="nc">&nbsp;                    &quot;Expected floor value greater than 1, received: &quot; + getCurrentValue().intValue());</b>
+&nbsp;        }
+&nbsp;
+<b class="nc">&nbsp;        if (value == &#39;A&#39;) {</b>
+<b class="nc">&nbsp;            int len = String.format(&quot;%d&quot;, getCurrentValue().intValue()).length(),</b>
+<b class="nc">&nbsp;                temp = getCurrentValue().intValue(),</b>
+<b class="nc">&nbsp;                digit, sum = 0;</b>
+&nbsp;
+&nbsp;            do {
+<b class="nc">&nbsp;                digit = temp % 10;</b>
+<b class="nc">&nbsp;                temp /= 10;</b>
+<b class="nc">&nbsp;                sum += exponent(digit, len);</b>
+<b class="nc">&nbsp;            } while (temp &gt; 0);</b>
+&nbsp;
+<b class="nc">&nbsp;            return sum == getCurrentValue().intValue();</b>
+<b class="nc">&nbsp;        } else if (value == &#39;P&#39;) {</b>
+<b class="nc">&nbsp;            int sum = 1;</b>
+&nbsp;
+<b class="nc">&nbsp;            for (int i = 2; i &lt;= getCurrentValue().intValue() / 2; i++) {</b>
+<b class="nc">&nbsp;                if (getCurrentValue().intValue() % i == 0) {</b>
+<b class="nc">&nbsp;                    sum += i;</b>
+&nbsp;                }
+&nbsp;            }
+<b class="nc">&nbsp;            System.out.printf(&quot;%d &lt;-&gt; %d\n&quot;, sum, getCurrentValue().intValue());</b>
+<b class="nc">&nbsp;            return sum == getCurrentValue().intValue();</b>
+<b class="nc">&nbsp;        } else throw new NotSupportedOperationException();</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /* [public] for unit-testing purposes */
+&nbsp;    public int exponent(int value, int exponent) {
+<b class="nc">&nbsp;        if (exponent == 0) return 1;</b>
+&nbsp;
+<b class="nc">&nbsp;        int originalValue = value;</b>
+<b class="nc">&nbsp;        while (exponent &gt; 1) {</b>
+<b class="nc">&nbsp;            value *= originalValue;</b>
+<b class="nc">&nbsp;            exponent--;</b>
+&nbsp;        }
+&nbsp;
+<b class="nc">&nbsp;        return value;</b>
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2024-12-01 16:16</div>
+</div>
+</body>
+</html>
